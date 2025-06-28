@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boston House Price Prediction</title>
+</head>
+<body>
+    <h1>Boston House Price Prediction</h1>
+   <form action="{{ url_for('predict') }}" method="post">
+    <label>Gender:</label>
+    <input type="number" name="Gender" placeholder="male->0 female ->1" required><br><br>
+
+    <br><br>
+
+    <label>Age:</label>
+    <input type="number" name="Age" placeholder="Enter age" required><br><br>
+
+    <label>Weight (kg):</label>
+    <input type="number" name="Weight" placeholder="Enter weight in kg" step="any" required><br><br>
+
+    <label>Duration (minutes):</label>
+    <input type="number" name="Duration" placeholder="Duration in minutes" step="any" required><br><br>
+
+    <label>Heart Rate (bpm):</label>
+    <input type="number" name="Heart_Rate" placeholder="Heart Rate" step="any" required><br><br>
+
+    <label>Body Temperature (°C):</label>
+    <input type="number" name="Body_Temp" placeholder="Body Temperature" step="any" required><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Ignore Jupyter notebooks and checkpoints
+*.ipynb
+.ipynb_checkpoints/
+
+# Ignore Git
+
+.git
+
+
+# Ignore editor configs
+.vscode/
+*.swp
