@@ -22,7 +22,8 @@ def home():
 def predict():
     try:
         input_data = [float(x) for x in request.form.values()]
-        prediction = model.predict(input_data)[0]
+        final_input = np.array(input_data).reshape(1,-1)
+        prediction = model.predict(final_input)[0]
         return render_template('home.html',prediction_text = f"Calories burned = {prediction:.2f} ")
     except Exception as e:
         return render_template('home.html',prediction_text = f"Oops! Error{str(e)}")
