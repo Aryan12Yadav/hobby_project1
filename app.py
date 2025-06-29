@@ -34,7 +34,7 @@ def predict_api():
         data=request.get_json(force = True)['data']
         input_data = np.array(list(data.values())).reshape(1,-1)
         prediction = model.predict(input_data)[0]
-        return jsonify({'prediction':prediction})
+        return jsonify({'prediction':float(prediction)})
     except Exception as e:
         return jsonify({'error':str(e)})
 
